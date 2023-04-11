@@ -12,7 +12,7 @@ static DWORD WINAPI sleep_for(LPVOID lpParam)
 /// @param process A function returning int without arguments. Return 0 to exit loop.
 /// @param MaxSleepTime The target fixed time step, in miliseconds, for this loop.
 /// @param MinSleepTime The minimum period of time, in miliseconds, this loop will sleep between cycles.
-void pfts_loop(int (*process) (void), int MaxSleepTime = 16, int MinSleepTime = 1)
+void pfts_loop(int (*process) (void), int MaxSleepTime, int MinSleepTime)
 {
     int retval;
     do
